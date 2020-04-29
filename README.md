@@ -1,1 +1,1 @@
-this repository contains code to make a client manager
+this repository contains code to make a client manager.
