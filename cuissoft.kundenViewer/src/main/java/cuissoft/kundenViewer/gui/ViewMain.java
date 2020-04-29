@@ -1,12 +1,13 @@
-package cuissoft.project.kundenViewer.gui;
+package cuissoft.kundenViewer.gui;
 
 import java.awt.Dimension;
-import net.miginfocom.swing.MigLayout;
+
 import javax.swing.JFrame;
+import net.miginfocom.swing.MigLayout;
 
 public class ViewMain {
 	
-	private JFrame mainFrame;
+private JFrame mainFrame;
 	
 	public ViewMain() {
 		mainFrame = new JFrame("View");
@@ -17,4 +18,5 @@ public class ViewMain {
 		mainFrame.pack();
 		mainFrame.setVisible(true);
 	}
+	
 }
