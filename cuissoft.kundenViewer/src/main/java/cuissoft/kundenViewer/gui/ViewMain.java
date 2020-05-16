@@ -11,7 +11,7 @@ private JFrame mainFrame;
 	
 	public ViewMain() {
 		mainFrame = new JFrame("View");
-		mainFrame.setPreferredSize(new Dimension(1700,1000));
+		mainFrame.setPreferredSize(new Dimension(1000,300));
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.getContentPane().setLayout(new MigLayout("", "[grow]", "[][][]"));
 		
