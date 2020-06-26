@@ -14,3 +14,5 @@ kundenViewer/target/classes/cuissoft/project/kundenViewer/.DS_Store
 .DS_Store
 cuissoft.kundenViewer/.settings/org.eclipse.jdt.core.prefs
 cuissoft.kundenViewer/.settings/org.eclipse.m2e.core.prefs
+cuissoft.kundenViewer/target/classes/cuissoft/kundenViewer/gui/ViewMain.class
+cuissoft.kundenViewer/target/classes/cuissoft/kundenViewer/ProgramStart.class
