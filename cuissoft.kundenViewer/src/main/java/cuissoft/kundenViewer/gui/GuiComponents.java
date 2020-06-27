@@ -9,10 +9,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
+public class GuiComponents {
 
-public class MenuBar {
-	
-	
 	
 	public JMenuBar getMenuBar() {
 		JMenuBar menuBar = new JMenuBar();
@@ -28,29 +26,25 @@ public class MenuBar {
 				if (result == 0) {
 					System.exit(0);
 				}
-				
 		      }
 		});
-		
 		
 		//menu SOURCE
 		JMenu menuSource = new JMenu("Source");
 		
 		JMenuItem config = new JMenuItem(new AbstractAction("Config") {
 			 public void actionPerformed(final ActionEvent e) {
-				 //  call the dialog for the setingsDialog with all components
-				 dialogConfig = new DialogConfig(components);
+				 
 				 
 			 }
 		});		
 		menuSource.add(config);
-		
-		
-		
+
 		//  add all menu into the menuBar
 		menuBar.add(menuFile);
-		
-		
+		menuBar.add(menuSource);
+		menuBar.add(exit);
+
 		return menuBar;
 	}	
 }

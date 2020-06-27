@@ -6,27 +6,47 @@ import net.miginfocom.swing.MigLayout;
 
 public class ViewMain{
 	
-private JFrame mainFrame;
+	
+	private JFrame mainFrame;
+	private GuiPanels PanelForMainGui;
+	private JTable tblKundeList;
+	private JTextField txfSearch;
+	private JMenuBar myMainMenuBar;
 
 	public ViewMain() {
 		
 		
 		mainFrame = new JFrame("View");
-		mainFrame.setPreferredSize(new Dimension(1700,1000));
+		mainFrame.setPreferredSize(new Dimension(700,600));
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.getContentPane().setLayout(new MigLayout("debug", "[grow]", "[][][]"));
-		//Añadiendo la barra y los paneles de busqueda y el panel general
-		mainFrame.add(new Barra(),"wrap");
-		mainFrame.add(new Pnl_search());
-		mainFrame.add(new Pnl_gral());
+
+		PanelForMainGui = new GuiPanels();
+		tblKundeList = new JTable();
+		txfSearch = new JTextField();
+		myMainMenuBar= new JMenuBar();
+		
+
 	}
+	
 	
 	
 	public void showWindows() {
 		
+		mainFrame.setJMenuBar(PanelForMainGui.GetMenuBar(myMainMenuBar));
 		
+		mainFrame.add(PanelForMainGui.GetPanelKundenTable(tblKundeList, txfSearch));
+		
+		mainFrame.add(PanelForMainGui.GetPanelInformation());
+
 		mainFrame.pack();
 		mainFrame.setVisible(true);
 	}
 	
+	
+	
+	
+	
 }
+
+
