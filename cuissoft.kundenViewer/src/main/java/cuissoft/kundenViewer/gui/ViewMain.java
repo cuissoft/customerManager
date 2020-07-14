@@ -19,7 +19,7 @@ public class ViewMain{
 		mainFrame = new JFrame("View");
 		mainFrame.setPreferredSize(new Dimension(700,600));
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		mainFrame.getContentPane().setLayout(new MigLayout("debug", "[grow]", "[][][]"));
+		mainFrame.getContentPane().setLayout(new MigLayout("debug", "[grow]", "[][]"));
 
 		PanelForMainGui = new GuiPanels();
 		tblKundeList = new JTable();

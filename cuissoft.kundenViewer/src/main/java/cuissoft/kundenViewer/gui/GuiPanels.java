@@ -32,7 +32,7 @@ public class GuiPanels extends JPanel{
 	public JPanel GetPanelKundenTable(JTable tblKundeList, JTextField txfSearch) {
 		
 		JPanel myPanel= new JPanel();
-		myPanel.setLayout(new MigLayout("debug", "[grow]", "[][][]"));
+		myPanel.setLayout(new MigLayout("debug", "[grow]", "[]"));
 				
 		this.tblKunde = tblKundeList;
 		this.txfSearch = txfSearch;
@@ -52,33 +52,27 @@ public class GuiPanels extends JPanel{
 	public JPanel GetPanelInformation() {
 		
 		JPanel myPanel= new JPanel();
-		myPanel.setLayout(new MigLayout("debug", "[grow]", "[][][]"));
+		myPanel.setLayout(new MigLayout("debug", "[grow]", "[]"));
 		
 		JLabel lblAdresse = new JLabel("Adresse:");
 		
 		JLabel lblTelefon = new JLabel("Telefon:");
 		
+		
 		JLabel lblGeburstag = new JLabel("Gebursta:");
+		
 		
 		JLabel lblCategorie = new JLabel("Categorie:");
 		
+		
 				
 		txfSearch.setPreferredSize(new Dimension(300, 24));
+			
 		
-		JLabel lblSearch = new JLabel("Suche");
-		
-		
-		myPanel.add(lblAdresse);
-		myPanel.add(lblTelefon);
-		myPanel.add(lblGeburstag);
-		myPanel.add(lblCategorie);
-		
-		
-		
-		myPanel.add(lblSearch, "split");
-		myPanel.add(txfSearch, "wrap");
-		myPanel.add(new JScrollPane(tblKunde), "grow");
-		
+		myPanel.add(lblAdresse, "wrap");
+		myPanel.add(lblTelefon, "wrap");
+		myPanel.add(lblGeburstag, "wrap");
+		myPanel.add(lblCategorie, "wrap");
 		
 		
 		return myPanel;
